@@ -33,6 +33,8 @@ echo # CHECKING FASTBOOT DEVICES #
 echo #############################
 %fastboot% devices
 
+%fastboot% reboot bootloader
+
 %fastboot% getvar current-slot 2>&1 | find /c "current-slot: a" > tmpFile.txt
 set /p active_slot= < tmpFile.txt
 del /f /q tmpFile.txt

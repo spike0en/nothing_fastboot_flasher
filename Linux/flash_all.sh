@@ -73,6 +73,10 @@ function CreateLogicalPartition {
     fi
 }
 
+function RebootToBootloaderFastboot {
+    $fastboot reboot bootloader
+}
+
 function ResizeLogicalPartition {
     for i in $logical_partitions; do
         for s in a b; do 
@@ -96,6 +100,9 @@ echo "#############################"
 echo "# CHECKING FASTBOOT DEVICES #"
 echo "#############################"
 $fastboot devices
+
+# Make sure device is in the bootloader fastboot mode and not fastbootd.
+RebootToBootloaderFastboot
 
 ACTIVE_SLOT=$($fastboot getvar current-slot 2>&1 | awk 'NR==1{print $2}')
 if [ ! $ACTIVE_SLOT = "waiting" ] && [ ! $ACTIVE_SLOT = "a" ]; then
