@@ -17,4 +17,4 @@
 - The script flashes the ROM on slot A and destroys the partitions on slot B to create space for the partitions being flashed on slot A. This is why we do not include the ability to switch slots; the partitions on the inactive slot would be destroyed. Therefore, the script only flashes the partitions on the primary slot, which is slot A.
 
 ### Thanks to
-[HELLBOY017](https://github.com/HELLBOY017) and all the contributors for their efforts in refining the script.
+- [HELLBOY017](https://github.com/HELLBOY017) and all the contributors for their efforts in refining the script.
