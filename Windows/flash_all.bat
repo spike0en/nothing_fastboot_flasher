@@ -107,8 +107,8 @@ if not exist super.img (
     call :FlashImage super, super.img
 )
 
-if not exist super.img (
-    call :RebootBootloader
+if exist super.img (
+    call :RebootFastbootD
 )
 
 echo ####################################
@@ -121,8 +121,6 @@ for %%i in (%vbmeta_partitions%) do (
         call :FlashImage %%i, %%i.img
     )
 )
-
-call :RebootFastbootD
 
 echo #####################
 echo # FLASHING FIRMWARE #
