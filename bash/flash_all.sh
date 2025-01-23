@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 
-echo "#############################"
-echo "# Pong Fastboot ROM Flasher #"
-echo "#############################"
+echo "#################################"
+echo "# Spacewar Fastboot ROM Flasher #"
+echo "#    t.me/s/Nothing_Archive     #"
+echo "#################################"
 
 ##----------------------------------------------------------##
 if [ ! -d "$(pwd)/platform-tools" ]; then

@@ -1,9 +1,10 @@
 @echo off
-title Nothing Phone 2 Fastboot ROM Flasher
+title Nothing Phone (1) Fastboot ROM Flasher
 
-echo #############################
-echo # Pong Fastboot ROM Flasher #
-echo #############################
+echo #################################
+echo # Spacewar Fastboot ROM Flasher #
+echo #   (t.me/s/Nothing_Archive)    # 
+echo #################################
 
 cd %~dp0
 
