@@ -13,6 +13,7 @@
     ```
 
 ### Notes
+- Windows 10+ supported.
 - For a bash-supporting operating system, the `curl` and `unzip` utilities should be installed on your system.
 - The script flashes the ROM on slot A and destroys the partitions on slot B to create space for the partitions being flashed on slot A. This is why we do not include the ability to switch slots; the partitions on the inactive slot would be destroyed. Therefore, the script only flashes the partitions on the primary slot, which is slot A.
 
