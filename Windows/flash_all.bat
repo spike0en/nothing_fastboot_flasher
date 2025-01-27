@@ -1,9 +1,17 @@
 @echo off
 title Nothing Phone (1) Fastboot ROM Flasher
 
+:: Ensure the script runs as administrator
+net session >nul 2>&1
+if %errorlevel% neq 0 (
+    :: Relaunch the script as administrator using PowerShell
+    powershell -Command "Start-Process '%~f0' -Verb RunAs"
+    exit /b
+)
+
 echo #################################
 echo # Spacewar Fastboot ROM Flasher #
-echo #   (t.me/s/Nothing_Archive)    # 
+echo #   (t.me/s/Nothing_Archive)    #
 echo #################################
 
 cd %~dp0
