@@ -14,19 +14,26 @@ echo # Spacewar Fastboot ROM Flasher #
 echo #   (t.me/s/Nothing_Archive)    #
 echo #################################
 
-cd %~dp0
+:: Set working directory and validate paths
+set "WORK_DIR=%~dp0"
+cd /d "%WORK_DIR%"
 
-if not exist platform-tools-latest (
-    curl --ssl-no-revoke -L https://dl.google.com/android/repository/platform-tools-latest-windows.zip -o platform-tools-latest.zip
-    Call :UnZipFile "%~dp0platform-tools-latest.zip", "%~dp0platform-tools-latest"
-    del /f /q platform-tools-latest.zip
+:: Create platform tools directory if it doesn't exist
+if not exist "platform-tools-latest" (
+    mkdir "platform-tools-latest"
+    echo Downloading platform tools...
+    powershell -Command "(New-Object Net.WebClient).DownloadFile('https://dl.google.com/android/repository/platform-tools-latest-windows.zip', 'platform-tools-latest.zip')"
+    powershell -Command "Expand-Archive -Path 'platform-tools-latest.zip' -DestinationPath 'platform-tools-latest' -Force"
+    del /f /q "platform-tools-latest.zip"
 )
 
-set fastboot=.\platform-tools-latest\platform-tools\fastboot.exe
-if not exist %fastboot% (
-    echo Fastboot cannot be executed. Aborting
+:: Validate fastboot existence
+set "fastboot=.\platform-tools-latest\platform-tools\fastboot.exe"
+if not exist "%fastboot%" (
+    echo Error: Fastboot executable not found.
+    echo Please ensure platform tools are properly downloaded.
     pause
-    exit
+    exit /b 1
 )
 
 set boot_partitions=boot vendor_boot dtbo
