@@ -1,11 +1,21 @@
 # Nothing & CMF Fastboot Flashing Scripts
 
-### About 📋:
+## About 📋:
 
 - This collection of fastboot flashing scripts is designed for flashing stock [Nothing OS firmware](https://github.com/spike0en/nothing_archive) on Nothing & CMF devices, supporting both Windows and bash platforms.
 - The script helps users revert to stock ROMs or unbrick devices, especially when the super partition size remains unchanged. It's useful when custom recoveries fail to flash the stock ROM due to partition issues. The script can also be adapted to flash custom ROMs that use the same partition size as the stock firmware.
 
-### Usage ⚙️:
+## Download 📥: 
+
+### ⚪ Nothing 
+- **Phone (1)**: [Windows](https://github.com/spike0en/nothing_fastboot_flasher/blob/spacewar/Windows/flash_all.bat) | [Bash](https://github.com/spike0en/nothing_fastboot_flasher/blob/spacewar/bash/flash_all.sh)  
+- **Phone (2)**: [Windows](https://github.com/spike0en/nothing_fastboot_flasher/blob/pong/Windows/flash_all.bat) | [Bash](https://github.com/spike0en/nothing_fastboot_flasher/blob/pong/bash/flash_all.sh)  
+- **Phone (2a) & (2a) Plus**: [Windows](https://github.com/spike0en/nothing_fastboot_flasher/blob/pacman/Windows/flash_all.bat)  
+
+### 🔴 CMF by Nothing  
+- **Phone 1**: [Windows](https://github.com/spike0en/nothing_fastboot_flasher/blob/tetris/Windows/flash_all.bat)  
+
+## Usage ⚙️:
 
 - Refer to [this guide](https://github.com/spike0en/nothing_archive?tab=readme-ov-file#flashing-the-stock-rom-using-fastboot-) for preparing the flashing folder with the respective stock firmware images and run the flashing script for your respective platform.
 - Alternatively, users can dump the `payload.bin` using [payload_dumper_go](https://github.com/ssut/payload-dumper-go) by unpacking a full stock firmware zip and then place the script suited to your operating system in the directory where the `*.img` files from `payload.bin` have been extracted. Finally, reboot your device to the bootloader and then run the flashing script.
@@ -16,7 +26,7 @@
   bash flash_all.sh
   ```
 
-### Notes 📝:
+## Notes 📝:
 
 - A working internet connection is required to download the latest version of `platform-tools` if it's not already present in the working directory.
 - Make sure to download the script that corresponds to your device model's codename and platform (Windows or bash).
@@ -35,7 +45,7 @@
   └── Required stock firmware image files
   ```
 
-### Acknowledgments 🤝:
+## Acknowledgments 🤝:
 
 - Special thanks to [HELLBOY017](https://github.com/HELLBOY017/Pong_fastboot_flasher), [AntoninoScordino](https://github.com/nothing-Pacman/flashtool), and all [contributors](https://github.com/HELLBOY017/Pong_fastboot_flasher/graphs/contributors) for refining the scripts for Qualcomm and MediaTek platforms.
 
