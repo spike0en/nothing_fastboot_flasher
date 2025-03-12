@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
+#
+# SPDX-FileCopyrightText: Hellboy017, spike0en
+# SPDX-License-Identifier: MIT
+#
 
 echo "##################################"
 echo "# Asteroids Fastboot ROM Flasher #"
