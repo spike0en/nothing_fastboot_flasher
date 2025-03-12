@@ -11,6 +11,7 @@
 - **Phone (1)**: [Windows](https://github.com/spike0en/nothing_fastboot_flasher/blob/spacewar/Windows/flash_all.bat) | [Bash](https://github.com/spike0en/nothing_fastboot_flasher/blob/spacewar/bash/flash_all.sh)  
 - **Phone (2)**: [Windows](https://github.com/spike0en/nothing_fastboot_flasher/blob/pong/Windows/flash_all.bat) | [Bash](https://github.com/spike0en/nothing_fastboot_flasher/blob/pong/bash/flash_all.sh)  
 - **Phone (2a) & (2a) Plus**: [Windows](https://github.com/spike0en/nothing_fastboot_flasher/blob/pacman/Windows/flash_all.bat)  
+- **Phone (3a) & (3a) Pro**: [Windows](https://github.com/spike0en/nothing_fastboot_flasher/blob/asteroids/Windows/flash_all.bat) | [Bash](https://github.com/spike0en/nothing_fastboot_flasher/blob/asteroids/bash/flash_all.sh)
 
 ### 🔴 CMF by Nothing  
 - **Phone 1**: [Windows](https://github.com/spike0en/nothing_fastboot_flasher/blob/tetris/Windows/flash_all.bat)  
